@@ -1,0 +1,18 @@
+.parasite-focus {
+    background: #39ff14 !important;
+    color: black !important;
+    font-weight: bold !important;
+    padding: 2px 6px !important;
+    border-radius: 3px !important;
+    animation: parasite 0.7s infinite alternate;
+}
+
+@keyframes parasite {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.18);
+    }
+}

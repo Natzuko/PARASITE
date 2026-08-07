@@ -1,0 +1,56 @@
+{
+  "manifest_version": 3,
+  "name": "PARASITE",
+  "version": "0.1.0",
+  "description": "Navigating the Wrong Internet. Primera prueba: detección de enlaces.",
+
+  "permissions": ["storage", "offscreen"],
+
+  "background": {
+    "service_worker": "service-worker.js"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://*/*", "https://*/*"],
+      "css": ["core/parasite.css"],
+      "js": [
+        "platform/browser-adapter.js",
+        "audio/bridge.js",
+        "core/memory.js",
+        "core/brain.js",
+        "core/attention.js",
+        "core/cognition.js",
+        "core/pressure.js",
+        "core/mutation.js",
+        "core/ecology.js",
+        "core/evolution.js",
+        "core/organism.js",
+        "core/platform-view.js",
+        "core/behavior.js",
+        "core/navigation.js",
+        "core/sound.js",
+        "core/parasite.js",
+        "content/observer.js",
+        "content/links.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "audio/habitat/habitat_01.wav",
+        "audio/events/click_01.wav",
+        "audio/events/click_02.wav",
+        "audio/textures/noise_01.wav"
+      ],
+      "matches": ["<all_urls>"]
+    }
+  ],
+
+  "action": {
+    "default_title": "PARASITE"
+  }
+}
